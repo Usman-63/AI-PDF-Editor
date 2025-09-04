@@ -66,7 +66,7 @@ A modern, modular web application built with Streamlit that uses AI (Google Gemi
 ### Basic Version (Manual Editing)
 1. **Run the basic application**:
    ```bash
-   streamlit run app.py
+   streamlit run app_refactored.py
    ```
 
 ### Prompt-Driven Editor (Recommended)
@@ -105,7 +105,7 @@ A modern, modular web application built with Streamlit that uses AI (Google Gemi
    - Click "Generate Edited PDF"
    - Download the edited PDF with a timestamped filename
 
-5. **Download options**:
+6. **Download options**:
    - **Original PDF**: Download the original file for comparison
    - **Edited PDF**: Download the edited version with all changes applied
    - **Automatic naming**: Files are automatically named with timestamps
@@ -124,7 +124,7 @@ A modern, modular web application built with Streamlit that uses AI (Google Gemi
 
 ## How It Works
 
-### AI-Enhanced Version
+### How the App Works
 1. **Upload**: PDF files are uploaded through Streamlit's file uploader
 2. **Extract**: PyMuPDF extracts text with position and formatting information
 3. **AI Analysis**: Gemini AI analyzes the text and modification request
@@ -133,17 +133,8 @@ A modern, modular web application built with Streamlit that uses AI (Google Gemi
 6. **Highlight**: Content is highlighted based on AI analysis
 7. **Download**: Modified PDF with preserved formatting is generated
 
-### Basic Version
-1. **Upload**: PDF files are uploaded through Streamlit's file uploader
-2. **Extract**: PyPDF2 extracts text content from each page
-3. **Edit**: Users manually modify the extracted text
-4. **Process**: Built-in tools help with common modifications
-5. **Generate**: ReportLab creates a new PDF with modified content
-6. **Download**: Users can download the modified PDF file
-
 ## Limitations
 
-### AI-Enhanced Version
 - Requires a valid Gemini API key
 - Text-based PDFs work best (scanned PDFs may not extract text properly)
 - Complex layouts with images may not be perfectly preserved
@@ -152,11 +143,6 @@ A modern, modular web application built with Streamlit that uses AI (Google Gemi
   - Gemini 2.5 Flash: 30 requests/minute, 1M tokens/minute, 200 requests/day
   - Gemini 2.5 Flash-Lite: 15 requests/minute, 250K tokens/minute, 1K requests/day
   - Gemini 2.5 Pro: 5 requests/minute, 250K tokens/minute, 100 requests/day
-
-### Basic Version
-- Text-based PDFs work best (scanned PDFs may not extract text properly)
-- Complex formatting may not be preserved in the output PDF
-- Large PDFs may take longer to process
 
 ## 🚀 Deployment
 
@@ -187,19 +173,15 @@ For secure deployment with your API key:
      GEMINI_API_KEY = "your_api_key_here"
      ```
 
-📖 **Detailed deployment guide**: See `DEPLOYMENT_GUIDE.md`
+📖 **For detailed deployment instructions, see the deployment section above.**
 
 ## Troubleshooting
 
-### AI-Enhanced Version
 - **API Key Issues**: Ensure your Gemini API key is valid and has sufficient quota
 - **Model Not Found Error**: If you get "404 models/gemini-pro is not found", the app will automatically try different model names (gemini-2.5-flash, gemini-2.5-flash-lite, gemini-2.5-pro, etc.)
 - **PDF not extracting text**: Ensure the PDF contains selectable text (not just images)
 - **AI Processing Errors**: Check your internet connection and API key validity
 - **Layout Issues**: Complex PDFs with images may not preserve layout perfectly
-
-### General Issues
-- **PDF not extracting text**: Ensure the PDF contains selectable text (not just images)
 - **Installation issues**: Make sure you're using Python 3.7 or higher
 - **Memory issues**: Try with smaller PDF files if you encounter memory problems
 - **Dependency conflicts**: Use a virtual environment to avoid package conflicts
