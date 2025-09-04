@@ -1,13 +1,13 @@
 # Prompt-Driven PDF Editor with Humanized Content Generation
 
-A modern, modular web application built with Streamlit that uses AI (Google Gemini) to intelligently edit PDF files through natural language prompts while preserving the original layout and generating humanized content. Features customizable themes, flexible API key management, and clean modular architecture.
+A modern, modular web application built with Streamlit that uses AI (Google Gemini) to intelligently edit PDF files through natural language prompts while preserving the original layout and generating humanized content. Features flexible API key management and clean modular architecture.
 
 ## 🆕 Latest Features
 
-### 🎨 **Custom Color Themes**
-- Beautiful, customizable color schemes
-- Professional appearance with modern styling
-- Easy theme customization in `config.py`
+### 🚀 **Live Deployment**
+- **Try it now**: [https://ai-pdf-editor-jsq9hxcetn6fu2wk3asxqd.streamlit.app/](https://ai-pdf-editor-jsq9hxcetn6fu2wk3asxqd.streamlit.app/)
+- Fully functional web application
+- No installation required
 
 ### 🔑 **Flexible API Key Management**
 - **Default API Key**: Set once in config, use everywhere
